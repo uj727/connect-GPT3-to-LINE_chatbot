@@ -20,7 +20,7 @@ from new import *
 import tempfile, os
 import datetime
 import time
-import openai
+import openai 
 #======python的函數庫==========
 
 app = Flask(__name__)

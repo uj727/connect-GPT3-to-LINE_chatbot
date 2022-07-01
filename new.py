@@ -5,7 +5,7 @@ from linebot.models import *
 
 def test():
     message = TemplateSendMessage(
-        alt_text='圖片旋轉木馬',
+        alt_text='圖片',
         template=ImageCarouselTemplate(
             columns=[
                 ImageCarouselColumn(
