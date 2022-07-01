@@ -50,7 +50,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text
-    if '圖片畫廊' in msg:
+    if '圖片' in msg:
         message = test()
         line_bot_api.reply_message(event.reply_token, message)
     elif '最新' in msg:
@@ -58,7 +58,7 @@ def handle_message(event):
         #message = TextSendMessage(text=msg)
         line_bot_api.reply_message(event.reply_token, message)
     else:
-        message=ask(msg)
+      
         message = TextSendMessage(text="工三小"+msg)
         line_bot_api.reply_message(event.reply_token, message)
 
