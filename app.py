@@ -7,11 +7,12 @@ from linebot.exceptions import (
     InvalidSignatureError
 )
 from linebot.models import *
-from model import ask
+
 
 
 #======這裡是呼叫的檔案內容=====
 #from message import *
+from model import *
 from new import *
 #from Function import *
 #======這裡是呼叫的檔案內容=====
@@ -60,7 +61,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, message)
     else:
       
-        message = TextSendMessage(text="工三毀"+msg)
+        message = TextSendMessage(text="工三小"+msg)
         line_bot_api.reply_message(event.reply_token, message)
 
 
