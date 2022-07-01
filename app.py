@@ -53,10 +53,20 @@ def handle_message(event):
     if '圖片畫廊' in msg:
         message = test()
         line_bot_api.reply_message(event.reply_token, message)
+    elif '最新' in msg:
+        message=ask()
+        #message = TextSendMessage(text=msg)
+        line_bot_api.reply_message(event.reply_token, message)
+
     else:
         message=ask(msg)
         #message = TextSendMessage(text=msg)
         line_bot_api.reply_message(event.reply_token, message)
+
+
+
+
+
 
 @handler.add(PostbackEvent)
 def handle_message(event):

@@ -10,11 +10,11 @@
 import tempfile, os
 import datetime
 import time
-age=input("請輸入:  ")
+#age=input("請輸入:  ")
 from model import ask
 #======python的函數庫==========
 
-a=ask(age)
+a=ask()
 print(a)
 
     
