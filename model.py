@@ -19,6 +19,6 @@ def ask():
 )
     story = response['choices'][0]['text'] 
     
-    return str(story) 
+    return story
     #print( str(story) )
 #ask("what are the symptom of heartdisease") 

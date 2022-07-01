@@ -57,10 +57,9 @@ def handle_message(event):
         message=ask()
         #message = TextSendMessage(text=msg)
         line_bot_api.reply_message(event.reply_token, message)
-
     else:
         message=ask(msg)
-        #message = TextSendMessage(text=msg)
+        message = TextSendMessage(text="工三小"+msg)
         line_bot_api.reply_message(event.reply_token, message)
 
 
