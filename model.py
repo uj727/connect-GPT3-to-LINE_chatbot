@@ -7,9 +7,9 @@
 
 
 def ask(): 
+    message = TextSendMessage(text="工三小")
     #import openai
     #openai.api_key = "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"
-    story='111'
     # response = openai.Completion.create(
     # model="text-curie-001",
     # prompt="how old are you",
@@ -21,6 +21,6 @@ def ask():
     #                                     )
     #story = response['choices'][0]['text'] 
     
-    return story
+    return message
     #print( str(story) )
 #ask("what are the symptom of heartdisease") 

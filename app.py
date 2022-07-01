@@ -60,7 +60,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, message)
     else:
       
-        message = TextSendMessage(text="工三小"+msg)
+        message = TextSendMessage(text="工三毀"+msg)
         line_bot_api.reply_message(event.reply_token, message)
 
 
