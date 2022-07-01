@@ -7,6 +7,7 @@ from linebot.exceptions import (
     InvalidSignatureError
 )
 from linebot.models import *
+from model import ask
 
 
 #======這裡是呼叫的檔案內容=====
@@ -53,7 +54,8 @@ def handle_message(event):
         message = test()
         line_bot_api.reply_message(event.reply_token, message)
     else:
-        message = TextSendMessage(text=msg)
+        message=ask(msg)
+        #message = TextSendMessage(text=msg)
         line_bot_api.reply_message(event.reply_token, message)
 
 @handler.add(PostbackEvent)
