@@ -14,10 +14,10 @@ from googletrans import Translator # Google 翻譯模組
 
 app = Flask(__name__)
 
-from config import * 
+#from config import * 
 
-line_bot_api = LineBotApi(channel_access_token)
-handler = WebhookHandler(channel_secret)
+line_bot_api = LineBotApi('QnQ0GccEGvNeJSJKjnHMm5+VcorJPuAxgrCtxqHAhgW+IQKOGJtz8V8p2M2Vql+NvgUQeScpZI3JJBAQ+bct4N86V7OeKMTTmmCYJG8git3YAm50kEYoE3Syi1gdb8ijlVlgfa5sWiceYbjrbFVl/AdB04t89/1O/w1cDnyilFU=')
+handler = WebhookHandler('acfb595de7ce00a944e38464f437c693')
 
 
 @app.route("/callback", methods=['POST'])
