@@ -66,6 +66,9 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, message)
    # else: line_bot_api.reply_message(event.reply_token,
             #TextSendMessage(text=event.message.text))
+    elif event.message.text[:2] == "最新":
+         message = TextSendMessage(text="工三小")
+         line_bot_api.reply_message(event.reply_token, message)
     else:
         message = TextSendMessage(text=message)
         line_bot_api.reply_message(event.reply_token, message)
