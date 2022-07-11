@@ -7,6 +7,7 @@ from linebot.exceptions import (
     InvalidSignatureError
 )
 from linebot.models import *
+from googletrans import Translator # Google 翻譯模組
 
 
 
@@ -47,11 +48,24 @@ def callback():
         abort(400)
     return 'OK'
 
+def translate_text(text,dest='en'):
+    """以google翻譯將text翻譯為目標語言
+
+    :param text: 要翻譯的字串，接受UTF-8編碼。
+    :param dest: 要翻譯的目標語言，參閱googletrans.LANGCODES語言列表。
+    """
+    translator = Translator()
+    result = translator.translate(text, dest).text
+    return result
 
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text
+    if event.message.text[:3] == "@翻英":
+        content = translate_text(event.message.text[3:], "en")
+        message = TextSendMessage(text=content)
+        line_bot_api.reply_message(event.reply_token, message)
     if '圖片' in msg:
         message = test()
         line_bot_api.reply_message(event.reply_token, message)
