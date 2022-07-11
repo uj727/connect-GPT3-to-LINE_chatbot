@@ -19,9 +19,9 @@ def ask(q):
     presence_penalty=0
                                         )
     story = response['choices'][0]['text'] 
-    results = (translator.translate(response['choices'][0]['text'],dest='zh-tw').text)
-    #message = TextSendMessage(text=results)
-    #return message
-    return story
+    #results = (translator.translate(response['choices'][0]['text'],dest='zh-tw').text)
+    message = TextSendMessage(text=results)
+    return message
+    #return story
     #print( str(story) )
 #ask("what are the symptom of heartdisease") 
