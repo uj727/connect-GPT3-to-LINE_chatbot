@@ -51,8 +51,7 @@ def translate_text(text,dest='en'):
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    if event.source.user_id =='Udeadbeefdeadbeefdeadbeefdeadbeef':
-        return 'OK'
+    
     if event.message.text[:3] == "@翻英":
         content = translate_text(event.message.text[3:], "en")
         message = TextSendMessage(text=content)
@@ -65,8 +64,12 @@ def handle_message(event):
         content = translate_text(event.message.text[3:] , "zh-tw")
         message = TextSendMessage(text=content)
         line_bot_api.reply_message(event.reply_token, message)
-    else: line_bot_api.reply_message(event.reply_token,
-                                     TextSendMessage(text=event.message.text))
+   # else: line_bot_api.reply_message(event.reply_token,
+            #TextSendMessage(text=event.message.text))
+    else:
+        message = TextSendMessage(text=message)
+        line_bot_api.reply_message(event.reply_token, message)
+
 
 if __name__ == "__main__":
     app.run()
