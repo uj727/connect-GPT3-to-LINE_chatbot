@@ -2,3 +2,5 @@ line-bot-sdk
 flask
 openai
 googletrans==3.0.0
+gunicorn==20.0.4
+apscheduler==3.6.3

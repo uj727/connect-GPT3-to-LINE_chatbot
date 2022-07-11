@@ -2,10 +2,10 @@
 from linebot import (LineBotApi, WebhookHandler)
 from linebot.exceptions import (InvalidSignatureError)
 from linebot.models import *
-
+from googletrans import Translator
 
 def ask(q): 
-    from googletrans import Translator
+    
     import openai
     translator = Translator()
     openai.api_key = "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"
