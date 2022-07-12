@@ -61,11 +61,12 @@ def translate_text(text,de):
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    msg = event.message.text
-    if event.message.text[:3] == "@翻英":
-        content = translate_text(event.message.text[3:], 'en')
-        message = TextSendMessage(text=content)
-        line_bot_api.reply_message(event.reply_token, message)
+    #msg = event.message.text
+    msg = translate_text(event.message.text, 'en')
+    # if event.message.text[:3] == "@翻英":
+    #     content = translate_text(event.message.text[3:], 'en')
+    #     message = TextSendMessage(text=content)
+    #     line_bot_api.reply_message(event.reply_token, message)
     if '圖片' in msg:
         message = test()
         line_bot_api.reply_message(event.reply_token, message)
@@ -75,7 +76,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, message)
 
     else:
-        message=ask(msg)
+        #message=ask(msg)
         message = TextSendMessage(text=msg)
         line_bot_api.reply_message(event.reply_token, message)
 
