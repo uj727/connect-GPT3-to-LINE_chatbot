@@ -48,6 +48,10 @@ def translate_text(text,de):
     result = translator.translate(text, dest=de).text
     return result
 
+def a():
+    f='555'
+    return f
+
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
@@ -55,11 +59,11 @@ def handle_message(event):
     msg = translate_text(event.message.text, 'en')#輸入的句子轉英文
 
     if 'picture' in msg:
-        message = TextSendMessage(text="工三小"+msg)
+        message = TextSendMessage(text="什麼"+msg)
         line_bot_api.reply_message(event.reply_token, message)
     
-    elif '111' in msg:
-        ans=ask()
+    elif '好吃' in msg:
+        ans=a()
         #ans = translate_text(event.message.text, 'zh-tw')#輸出轉成中文
         message = TextSendMessage(text=ans)
         line_bot_api.reply_message(event.reply_token, message)

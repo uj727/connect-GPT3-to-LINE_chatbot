@@ -1,4 +1,4 @@
-# import os
+
 from linebot import (LineBotApi, WebhookHandler)
 from linebot.exceptions import (InvalidSignatureError)
 from linebot.models import *
@@ -16,7 +16,7 @@ def ask():
     # presence_penalty=0
     #                                     )
     # story = response['choices'][0]['text'] 
-    message = TextSendMessage(text=55)
+    message = TextSendMessage(text="555")
     return message
     #return story
     #print( str(story) )
