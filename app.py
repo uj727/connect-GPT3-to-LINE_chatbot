@@ -52,11 +52,7 @@ def translate_text(text,de):
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text
-    #msg = translate_text(event.message.text, 'en')
-    # if event.message.text[:3] == "@翻英":
-    #     content = translate_text(event.message.text[3:], 'en')
-    #     message = TextSendMessage(text=content)
-    #     line_bot_api.reply_message(event.reply_token, message)
+    #msg = translate_text(event.message.text, 'en')#輸入的句子轉英文
 
     if '圖' in msg:
         message = TextSendMessage(text="工三小"+msg)
@@ -64,7 +60,7 @@ def handle_message(event):
     
     elif '111' in msg:
         ans=ask(msg)
-        #ans = translate_text(event.message.text, 'zh-tw')
+        #ans = translate_text(event.message.text, 'zh-tw')#輸出轉成中文
         message = TextSendMessage(text=ans)
         line_bot_api.reply_message(event.reply_token, message)
 

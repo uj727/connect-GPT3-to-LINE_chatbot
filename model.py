@@ -16,7 +16,7 @@ def ask(q):
     # presence_penalty=0
     #                                     )
     # story = response['choices'][0]['text'] 
-    message = TextSendMessage(text=q)
+    message = TextSendMessage(text=55)
     return message
     #return story
     #print( str(story) )
