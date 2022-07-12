@@ -62,20 +62,20 @@ def handle_message(event):
         message = TextSendMessage(text="什麼"+msg)
         line_bot_api.reply_message(event.reply_token, message)
     
-    elif 'eat' in msg:
+    elif 'what' in msg:
         ans=a()
         #ans = translate_text(event.message.text, 'zh-tw')#輸出轉成中文
         message = TextSendMessage(text=ans)
         line_bot_api.reply_message(event.reply_token, message)
-    elif 'ate' in msg:
-        ans=ask()
-        #ans = translate_text(event.message.text, 'zh-tw')#輸出轉成中文
+    else:
+        ans=ask(msg)
+        ans = translate_text(event.message.text, 'zh-tw')#輸出轉成中文
         message = TextSendMessage(text=ans)
         line_bot_api.reply_message(event.reply_token, message)
-    else:
-        #ans = translate_text(msg, 'zh-tw')
-        message = TextSendMessage(text=msg) #回一樣的訊息
-        line_bot_api.reply_message(event.reply_token, message)
+    # else:
+    #     #ans = translate_text(msg, 'zh-tw')
+    #     message = TextSendMessage(text=msg) #回一樣的訊息
+    #     line_bot_api.reply_message(event.reply_token, message)
 
 
 @handler.add(PostbackEvent)
