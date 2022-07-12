@@ -16,7 +16,8 @@ def ask():
     # presence_penalty=0
     #                                     )
     # story = response['choices'][0]['text'] 
-    message = TextSendMessage(text="555")
+    f='555'
+    message = TextSendMessage(text=f)
     return message
     #return story
     #print( str(story) )
