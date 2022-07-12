@@ -51,10 +51,10 @@ def translate_text(text,de):
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    msg = event.message.text
+    #msg = event.message.text
     msg = translate_text(event.message.text, 'en')#輸入的句子轉英文
 
-    if 'pic' in msg:
+    if 'picture' in msg:
         message = TextSendMessage(text="工三小"+msg)
         line_bot_api.reply_message(event.reply_token, message)
     
@@ -64,7 +64,8 @@ def handle_message(event):
         message = TextSendMessage(text=ans)
         line_bot_api.reply_message(event.reply_token, message)
     else:
-        message = ask(msg) #回一樣的訊息
+        #ans = translate_text(msg, 'zh-tw')
+        message = TextSendMessage(text=msg) #回一樣的訊息
         line_bot_api.reply_message(event.reply_token, message)
 
 
