@@ -3,7 +3,7 @@
 # from linebot.exceptions import (InvalidSignatureError)
 # from linebot.models import *
 
-def ask():
+def ask(q):
     # import openai
     # openai.api_key = "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"
     # response = openai.Completion.create(
@@ -17,7 +17,7 @@ def ask():
     #                                     )
     # story = response['choices'][0]['text'] 
     # message = TextSendMessage(text=55)
-    return 55
+    return 55+q
     #return story
     #print( str(story) )
 #ask("what are the symptom of heartdisease") 

@@ -61,10 +61,8 @@ def handle_message(event):
     if '最新' in msg:
         message = TextSendMessage(text="工三小"+msg)
         line_bot_api.reply_message(event.reply_token, message)
+    
     else:
-        message = TextSendMessage(text=msg) #回一樣的訊息
-        line_bot_api.reply_message(event.reply_token, message)
-    #else:
         ans=ask(msg)
         #ans = translate_text(event.message.text, 'zh-tw')
         message = TextSendMessage(text=ans)
