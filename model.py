@@ -17,8 +17,8 @@ def ask():
     #                                     )
     # story = response['choices'][0]['text'] 
     f='555'
-    message = TextSendMessage(text=f)
-    return message
+    
+    return f
     #return story
     #print( str(story) )
 #ask("what are the symptom of heartdisease") 
