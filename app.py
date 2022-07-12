@@ -59,7 +59,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, message)
     
     elif '111' in msg:
-        ans=ask(msg)
+        ans=ask()
         #ans = translate_text(event.message.text, 'zh-tw')#輸出轉成中文
         message = TextSendMessage(text=ans)
         line_bot_api.reply_message(event.reply_token, message)
