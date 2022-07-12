@@ -58,12 +58,12 @@ def handle_message(event):
     #     message = TextSendMessage(text=content)
     #     line_bot_api.reply_message(event.reply_token, message)
 
-    if '最新' in msg:
+    if '1' in msg:
         message = TextSendMessage(text="工三小"+msg)
         line_bot_api.reply_message(event.reply_token, message)
     
     elif '111' in msg:
-        ans=ask("how are you")
+        ans=ask(msg)
         #ans = translate_text(event.message.text, 'zh-tw')
         message = TextSendMessage(text=ans)
         line_bot_api.reply_message(event.reply_token, message)
