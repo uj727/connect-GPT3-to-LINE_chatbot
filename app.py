@@ -7,10 +7,7 @@ from linebot.exceptions import (
     InvalidSignatureError
 )
 from linebot.models import *
-from googletrans import Translator # Google 翻譯模組
-
-# gunicorn==20.0.4
-# apscheduler==3.6.3
+from googletrans import Translator 
 
 #======這裡是呼叫的檔案內容=====
 #from message import *
@@ -50,10 +47,6 @@ def callback():
     return 'OK'
 
 def translate_text(text,de):
-    """以google翻譯將text翻譯為目標語言
-    :param text: 要翻譯的字串，接受UTF-8編碼。
-    :param dest: 要翻譯的目標語言，參閱googletrans.LANGCODES語言列表。
-    """
     translator = Translator()
     result = translator.translate(text, dest=de).text
     return result
@@ -76,7 +69,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, message)
 
     else:
-        ans=ask(msg.text)
+        ans=ask(msg)
         #ans = translate_text(event.message.text, 'zh-tw')
         message = TextSendMessage(text=ans)
         line_bot_api.reply_message(event.reply_token, message)
