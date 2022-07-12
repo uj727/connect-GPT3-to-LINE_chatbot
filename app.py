@@ -9,7 +9,8 @@ from linebot.exceptions import (
 from linebot.models import *
 from googletrans import Translator # Google 翻譯模組
 
-
+# gunicorn==20.0.4
+# apscheduler==3.6.3
 
 #======這裡是呼叫的檔案內容=====
 #from message import *
@@ -60,8 +61,8 @@ def translate_text(text,de):
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    #msg = event.message.text
-    msg = translate_text(event.message.text, 'en')
+    msg = event.message.text
+    #msg = translate_text(event.message.text, 'en')
     # if event.message.text[:3] == "@翻英":
     #     content = translate_text(event.message.text[3:], 'en')
     #     message = TextSendMessage(text=content)

@@ -16,5 +16,3 @@ from model import ask
 aaa="how are you"
 a=ask(aaa)
 print(a)
-
-    
