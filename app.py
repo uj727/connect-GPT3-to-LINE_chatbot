@@ -10,10 +10,7 @@ from linebot.models import *
 from googletrans import Translator 
 
 #======這裡是呼叫的檔案內容=====
-#from message import *
 from model import *
-from new import *
-#from Function import *
 #======這裡是呼叫的檔案內容=====
 
 #======python的函數庫==========
@@ -60,25 +57,22 @@ def handle_message(event):
     #     content = translate_text(event.message.text[3:], 'en')
     #     message = TextSendMessage(text=content)
     #     line_bot_api.reply_message(event.reply_token, message)
-    if '圖片' in msg:
-        message = test()
-        line_bot_api.reply_message(event.reply_token, message)
-    
-    elif '最新' in msg:
+
+    if '最新' in msg:
         message = TextSendMessage(text="工三小"+msg)
         line_bot_api.reply_message(event.reply_token, message)
 
     else:
-        ans=ask(msg)
+        ans=ask()
         #ans = translate_text(event.message.text, 'zh-tw')
         message = TextSendMessage(text=ans)
         line_bot_api.reply_message(event.reply_token, message)
 
 
+
 @handler.add(PostbackEvent)
 def handle_message(event):
     print(event.postback.data)
-
 
 @handler.add(MemberJoinedEvent)
 def welcome(event):
@@ -89,8 +83,6 @@ def welcome(event):
     message = TextSendMessage(text=f'{name}歡迎加入')
     line_bot_api.reply_message(event.reply_token, message)
         
-        
-import os
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
