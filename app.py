@@ -48,9 +48,6 @@ def translate_text(text,de):
     result = translator.translate(text, dest=de).text
     return result
 
-def a():
-    f='555'
-    return f
 
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
@@ -62,21 +59,11 @@ def handle_message(event):
         message = TextSendMessage(text="什麼"+msg)
         line_bot_api.reply_message(event.reply_token, message)
     
-    elif 'what' in msg:
-        ans=a()
-        #ans = translate_text(event.message.text, 'zh-tw')#輸出轉成中文
-        message = TextSendMessage(text=ans)
-        line_bot_api.reply_message(event.reply_token, message)
     else:
         ans=ask(msg)
         ans = translate_text(ans, 'zh-tw')#輸出轉成中文
         message = TextSendMessage(text=ans)
         line_bot_api.reply_message(event.reply_token, message)
-    # else:
-    #     #ans = translate_text(msg, 'zh-tw')
-    #     message = TextSendMessage(text=msg) #回一樣的訊息
-    #     line_bot_api.reply_message(event.reply_token, message)
-
 
 @handler.add(PostbackEvent)
 def handle_message(event):
