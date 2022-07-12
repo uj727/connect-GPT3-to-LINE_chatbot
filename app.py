@@ -52,9 +52,9 @@ def translate_text(text,de):
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text
-    #msg = translate_text(event.message.text, 'en')#輸入的句子轉英文
+    msg = translate_text(event.message.text, 'en')#輸入的句子轉英文
 
-    if '圖' in msg:
+    if 'pic' in msg:
         message = TextSendMessage(text="工三小"+msg)
         line_bot_api.reply_message(event.reply_token, message)
     
@@ -63,7 +63,9 @@ def handle_message(event):
         #ans = translate_text(event.message.text, 'zh-tw')#輸出轉成中文
         message = TextSendMessage(text=ans)
         line_bot_api.reply_message(event.reply_token, message)
-
+    else:
+        message = ask(msg) #回一樣的訊息
+        line_bot_api.reply_message(event.reply_token, message)
 
 
 @handler.add(PostbackEvent)
