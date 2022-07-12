@@ -6,7 +6,6 @@ from linebot.models import *
 def ask(q): 
     
     import openai
-    translator = Translator()
     openai.api_key = "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"
     response = openai.Completion.create(
     model="text-curie-001",
