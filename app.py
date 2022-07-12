@@ -62,7 +62,7 @@ def handle_message(event):
         message = TextSendMessage(text="什麼"+msg)
         line_bot_api.reply_message(event.reply_token, message)
     
-    elif '好吃' in msg:
+    elif 'eat' in msg:
         ans=a()
         #ans = translate_text(event.message.text, 'zh-tw')#輸出轉成中文
         message = TextSendMessage(text=ans)
