@@ -75,9 +75,9 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, message)
 
     else:
-        ans=ask(msg)
+        #ans=ask(msg.text)
         #ans = translate_text(event.message.text, 'zh-tw')
-        message = TextSendMessage(text=ans)
+        message = TextSendMessage(text=msg)
         line_bot_api.reply_message(event.reply_token, message)
 
 
