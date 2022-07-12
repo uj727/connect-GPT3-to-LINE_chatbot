@@ -58,7 +58,7 @@ def handle_message(event):
     #     message = TextSendMessage(text=content)
     #     line_bot_api.reply_message(event.reply_token, message)
 
-    if '1' in msg:
+    if '圖' in msg:
         message = TextSendMessage(text="工三小"+msg)
         line_bot_api.reply_message(event.reply_token, message)
     
