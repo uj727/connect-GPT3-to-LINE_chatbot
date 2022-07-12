@@ -2,7 +2,6 @@
 from linebot import (LineBotApi, WebhookHandler)
 from linebot.exceptions import (InvalidSignatureError)
 from linebot.models import *
-from googletrans import Translator
 
 def ask(q): 
     
@@ -20,7 +19,7 @@ def ask(q):
                                         )
     story = response['choices'][0]['text'] 
     #results = (translator.translate(response['choices'][0]['text'],dest='zh-tw').text)
-    message = TextSendMessage(text=results)
+    message = TextSendMessage(text=story)
     return message
     #return story
     #print( str(story) )

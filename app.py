@@ -50,7 +50,6 @@ def callback():
 
 def translate_text(text,de):
     """以google翻譯將text翻譯為目標語言
-
     :param text: 要翻譯的字串，接受UTF-8編碼。
     :param dest: 要翻譯的目標語言，參閱googletrans.LANGCODES語言列表。
     """
@@ -76,13 +75,10 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, message)
 
     else:
-        #message=ask(msg)
-        message = TextSendMessage(text=msg)
+        ans=ask(msg)
+        ans = translate_text(event.message.text, 'zh-tw')
+        message = TextSendMessage(text=ans)
         line_bot_api.reply_message(event.reply_token, message)
-
-
-
-
 
 
 @handler.add(PostbackEvent)
