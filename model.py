@@ -1,7 +1,7 @@
 # import os
-from linebot import (LineBotApi, WebhookHandler)
-from linebot.exceptions import (InvalidSignatureError)
-from linebot.models import *
+# from linebot import (LineBotApi, WebhookHandler)
+# from linebot.exceptions import (InvalidSignatureError)
+# from linebot.models import *
 
 def ask():
     # import openai
@@ -16,8 +16,8 @@ def ask():
     # presence_penalty=0
     #                                     )
     # story = response['choices'][0]['text'] 
-    message = TextSendMessage(text=55)
-    return message
+    # message = TextSendMessage(text=55)
+    return 55
     #return story
     #print( str(story) )
 #ask("what are the symptom of heartdisease") 

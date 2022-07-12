@@ -13,6 +13,6 @@ import time
 #age=input("請輸入:  ")
 from model import ask
 #======python的函數庫==========
-aaa="how are you"
-a=ask(aaa)
+
+a=ask()
 print(a)
