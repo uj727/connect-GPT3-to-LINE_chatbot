@@ -69,7 +69,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, message)
     else:
         ans=ask(msg)
-        ans = translate_text(event.message.text, 'zh-tw')#輸出轉成中文
+        ans = translate_text(ans, 'zh-tw')#輸出轉成中文
         message = TextSendMessage(text=ans)
         line_bot_api.reply_message(event.reply_token, message)
     # else:
