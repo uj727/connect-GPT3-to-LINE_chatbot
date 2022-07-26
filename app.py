@@ -1,3 +1,4 @@
+#======LINE需求套件=====
 from flask import Flask, request, abort
 
 from linebot import (
@@ -7,18 +8,34 @@ from linebot.exceptions import (
     InvalidSignatureError
 )
 from linebot.models import *
-from googletrans import Translator 
+#======LINE需求套件=====
 
-#======這裡是呼叫的檔案內容=====
+#======呼叫檔案內容=====
 from model import *
-#======這裡是呼叫的檔案內容=====
+#======呼叫檔案內容=====
 
 #======python的函數庫==========
-import tempfile, os
-import datetime
+from googletrans import Translator 
+import os
 import time
 import openai 
+import threading 
+import requests
 #======python的函數庫==========
+
+#======讓heroku不會睡著======
+'''def wake_up_heroku():
+    while 1==1:
+        url = 'https://carebot0.herokuapp.com/' + 'heroku_wake_up'
+        res = requests.get(url)
+        if res.status_code==200:
+            print('喚醒heroku成功')
+        else:
+            print('喚醒失敗')
+        time.sleep(28*60)
+
+threading.Thread(target=wake_up_heroku).start()'''
+#======讓heroku不會睡著======
 
 app = Flask(__name__)
 static_tmp_path = os.path.join(os.path.dirname(__file__), 'static', 'tmp')
@@ -47,7 +64,6 @@ def translate_text(text,de):
     translator = Translator()
     result = translator.translate(text, dest=de).text
     return result
-
 
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
