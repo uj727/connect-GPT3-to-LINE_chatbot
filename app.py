@@ -72,7 +72,7 @@ def handle_message(event):
     msg = translate_text(event.message.text, 'en')#輸入的句子轉英文
 
     if 'picture' in msg:
-        message = TextSendMessage(text="什麼"+msg)
+        message = TextSendMessage(text="555"+msg)
         line_bot_api.reply_message(event.reply_token, message)
     
     else:
