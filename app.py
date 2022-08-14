@@ -79,7 +79,7 @@ def handle_message(event):
                                             如果您在住宿期間內碰到問題\
                                             歡迎撥打以下電話:03-4339090\
                                             我們會有專人為您服務\
-                                            如果您是要給予寶貴的意見\
+                                            如果您想給予寶貴的意見\
                                             可以在聊天室留下您的建議,\
                                             我們會有專人回覆~") 
         line_bot_api.reply_message(event.reply_token, message)

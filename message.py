@@ -16,7 +16,13 @@ def image_carousel_message1():
                         uri="https://haostore.fami.life/001971/"
                     )
                 ),
-               
+                ImageCarouselColumn(
+                    image_url="https://cdn.walkerland.com.tw/images/upload/poi/p80463/m15225/8aff422a7cd40b8b61f53182cab38ca6680cb13e.jpg",
+                    action=URITemplateAction(
+                        label="吾舍。生活 Woosah-Life",
+                        uri="https://www.facebook.com/woosahlife"
+                    )
+                ),
                 ImageCarouselColumn(
                     image_url="https://youimg1.tripcdn.com/target/0106v120009g3u6op325B.jpg",
                     action=URITemplateAction(
