@@ -72,11 +72,11 @@ def handle_message(event):
     #msg = event.message.text
     msg = translate_text(event.message.text, 'en')#輸入的句子轉英文
 
-    if '22' in msg:
+    if '想看看附近有什麼好玩的~' in msg:
         message =image_carousel_message1() #message.py
         line_bot_api.reply_message(event.reply_token, message)
 
-    elif '你好，有一些關於住宿的經驗想分享!' in msg:
+    elif '你好，有些住宿問題想要詢問!' in msg:
        pass
     else:
         ans=ask(msg)#輸出英文
