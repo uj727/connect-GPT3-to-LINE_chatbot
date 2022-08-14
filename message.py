@@ -6,35 +6,35 @@ from linebot.models import *
 
 def image_carousel_message1():
     message = TemplateSendMessage(
-        alt_text='圖片畫廊',
+        alt_text='附近景點',
         template=ImageCarouselTemplate(
-            columns=[
+            columns=[      
                 ImageCarouselColumn(
+                    image_url="https://pic.pimg.tw/yangbingyu/1527444375-3665627483.jpg",
+                    action=URITemplateAction(
+                        label="桑葚緣觀光果園",
+                        uri="https://haostore.fami.life/001971/g"
+                    )
+                ),
+                ImageCarouselColumn(
+                    image_url="https://cdn.walkerland.com.tw/images/upload/poi/p80463/m15225/8aff422a7cd40b8b61f53182cab38ca6680cb13e.jpg",
+                    action=URITemplateAction(
+                        label="吾舍。生活 Woosah-Life",
+                        uri="https://www.facebook.com/woosahlife/"
+                    )
+                ),
+                ImageCarouselColumn(
+                    image_url="https://youimg1.tripcdn.com/target/0106v120009g3u6op325B.jpg",
+                    action=URITemplateAction(
+                        label="溪洲山步道",
+                        uri="https://hiking.biji.co/index.php?q=trail&act=detail&id=598  "
+                    )
+                ),
+                 ImageCarouselColumn(
                     image_url="https://ireneslife.com/wp-content/uploads/2019/12/1575194969-1e860b27963d9e9d48e73585da40d20f.jpg",
                     action=URITemplateAction(
                         label="球場",
-                        uri="http://twbsball.dils.tku.edu.tw/wiki/index.php/%E5%85%84%E5%BC%9F%E9%BE%8D%E6%BD%AD%E6%A3%92%E7%90%83%E5%A0%B4"
-                    )
-                ),
-                ImageCarouselColumn(
-                    image_url="https://i.imgur.com/QOcAvjt.jpg",
-                    action=URITemplateAction(
-                        label="新鮮蔬菜",
-                        uri="https://cdn.101mediaimage.com/img/file/1410464751urhp5.jpg"
-                    )
-                ),
-                ImageCarouselColumn(
-                    image_url="https://i.imgur.com/Np7eFyj.jpg",
-                    action=URITemplateAction(
-                        label="可愛狗狗",
-                        uri="http://imgm.cnmo-img.com.cn/appimg/screenpic/big/674/673928.JPG"
-                    )
-                ),
-                ImageCarouselColumn(
-                    image_url="https://i.imgur.com/QRIa5Dz.jpg",
-                    action=URITemplateAction(
-                        label="可愛貓咪",
-                        uri="https://m-miya.net/wp-content/uploads/2014/07/0-065-1.min_.jpg"
+                        uri="https://lovefree365.pixnet.net/blog/post/405248655-%E3%80%90%E6%A1%83%E5%9C%92%E6%A3%92%E7%90%83%E5%90%8D%E4%BA%BA%E5%A0%82%E3%80%91%E5%B7%A8%E5%9E%8B%E7%90%83%E5%BD%A2%E5%A4%A7%E6%A8%93%E5%85%8D%E8%B2%BB%E5%8F%83%E8%A7%80%E5%8F%B2"
                     )
                 )
             ]

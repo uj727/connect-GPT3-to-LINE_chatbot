@@ -72,13 +72,12 @@ def handle_message(event):
     #msg = event.message.text
     msg = translate_text(event.message.text, 'en')#輸入的句子轉英文
 
-    if '11' in msg:
-        message = TextSendMessage(text="https://tlathena.ec-hotel.net/webhotel-v4/0854/index?_rand=1660447822646")
-        line_bot_api.reply_message(event.reply_token, message)
-
-    elif '22' in msg:
+    if '' in msg:
         message =image_carousel_message1() #message.py
         line_bot_api.reply_message(event.reply_token, message)
+
+    elif '你好，有一些關於住宿的問題想詢問!' in msg:
+       pass
     
     else:
         ans=ask(msg)#輸出英文
