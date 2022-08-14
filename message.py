@@ -9,13 +9,13 @@ def image_carousel_message1():
         alt_text='附近景點',
         template=ImageCarouselTemplate(
             columns=[      
-                # ImageCarouselColumn(
-                #     image_url="https://pic.pimg.tw/yangbingyu/1527444375-3665627483.jpg",
-                #     action=URITemplateAction(
-                #         label="桑葚緣觀光果園",
-                #         uri="https://haostore.fami.life/001971/"
-                #     )
-                # ),
+                ImageCarouselColumn(
+                    image_url="https://pic.pimg.tw/yangbingyu/1527444375-3665627483.jpg",
+                    action=URITemplateAction(
+                        label="桑葚緣觀光果園",
+                        uri="https://haostore.fami.life/001971/"
+                    )
+                ),
                 # ImageCarouselColumn(
                 #     image_url="https://cdn.walkerland.com.tw/images/upload/poi/p80463/m15225/8aff422a7cd40b8b61f53182cab38ca6680cb13e.jpg",
                 #     action=URITemplateAction(
