@@ -22,7 +22,7 @@ def image_carousel_message1():
                 #         label="吾舍。生活 Woosah-Life",
                 #         uri="https://www.facebook.com/woosahlife"
                 #     )
-                ),
+                # ),
                 ImageCarouselColumn(
                     image_url="https://youimg1.tripcdn.com/target/0106v120009g3u6op325B.jpg",
                     action=URITemplateAction(
