@@ -43,18 +43,18 @@ def Carousel_Template():
                 #     ]
                 # ),
                 CarouselColumn(
-                    thumbnail_image_url='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Number_3_in_yellow_rounded_square.svg/200px-Number_3_in_yellow_rounded_square.svg.png',
+                    thumbnail_image_url='https://www.google.com/search?q=%E7%AF%89%E7%8E%89%E9%99%B6%E5%9D%8A&sxsrf=ALiCzsZGL0PhBEh5oGxXnjqSZigBNNYSJA:1660449103294&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiRsuD3tsX5AhWsxosBHTZNDAIQ_AUoA3oECAIQBQ&biw=1536&bih=792&dpr=1.25#imgrc=AP4A502vvxLzpM',
                     title='這是第三11個模塊',
                     text='最多可以放十個',
                     actions=[
                         
                         MessageTemplateAction(
-                            label='用戶發送訊息',
+                            label='用戶發送訊',
                             text='我知道這是3'
                         ),
                         URITemplateAction(
                             label='uri2',
-                            uri='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Number_3_in_yellow_rounded_square.svg/200px-Number_3_in_yellow_rounded_square.svg.png'
+                            uri='https://www.facebook.com/zhuyu.ceramics.studio/'
                         )
                     ]
                 )
