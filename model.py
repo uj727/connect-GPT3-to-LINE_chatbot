@@ -13,8 +13,7 @@ def ask(q):
     top_p=1,
     frequency_penalty=0,
     presence_penalty=0,
-    stop=["END"]#
-)
-                                    
+    stop=["END"]
+)                     
     story = response['choices'][0]['text'] 
     return story

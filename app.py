@@ -12,6 +12,7 @@ from linebot.models import *
 
 #======呼叫檔案內容=====
 from model import *
+from new import *
 #======呼叫檔案內容=====
 
 #======python的函數庫==========
@@ -44,7 +45,6 @@ line_bot_api = LineBotApi('QnQ0GccEGvNeJSJKjnHMm5+VcorJPuAxgrCtxqHAhgW+IQKOGJtz8
 # Channel Secret
 handler = WebhookHandler('acfb595de7ce00a944e38464f437c693')
 
-
 # 監聽所有來自 /callback 的 Post Request
 @app.route("/callback", methods=['POST'])
 def callback():
@@ -71,13 +71,17 @@ def handle_message(event):
     #msg = event.message.text
     msg = translate_text(event.message.text, 'en')#輸入的句子轉英文
 
-    if 'picture' in msg:
-        message = TextSendMessage(text="555"+msg)
+    if '1' in msg:
+        message = TextSendMessage(text="https://tlathena.ec-hotel.net/webhotel-v4/0854/index?_rand=1660447822646")
+        line_bot_api.reply_message(event.reply_token, message)
+
+    elif '2' in msg:
+        message = pic() #message.py
         line_bot_api.reply_message(event.reply_token, message)
     
     else:
-        ans=ask(msg)
-        ans = translate_text(ans, 'zh-tw')#輸出轉成中文
+        ans=ask(msg)#輸出英文
+        ans = translate_text(ans, 'zh-tw')#輸出轉成中文``
         message = TextSendMessage(text=ans)
         line_bot_api.reply_message(event.reply_token, message)
 
