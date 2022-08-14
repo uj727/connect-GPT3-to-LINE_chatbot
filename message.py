@@ -13,7 +13,7 @@ def image_carousel_message1():
                     image_url="https://pic.pimg.tw/yangbingyu/1527444375-3665627483.jpg",
                     action=URITemplateAction(
                         label="桑葚緣觀光果園",
-                        uri="https://haostore.fami.life/001971/g"
+                        uri="https://haostore.fami.life/001971/"
                     )
                 ),
                 ImageCarouselColumn(
