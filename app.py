@@ -76,7 +76,7 @@ def handle_message(event):
         message = TextSendMessage(text="https://tlathena.ec-hotel.net/webhotel-v4/0854/index?_rand=1660447822646")
         line_bot_api.reply_message(event.reply_token, message)
 
-    elif '2' in msg:
+    elif '22' in msg:
         message = image_carousel_message1() #message.py
         line_bot_api.reply_message(event.reply_token, message)
     
