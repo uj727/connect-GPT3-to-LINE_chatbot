@@ -17,9 +17,9 @@ def image_carousel_message1():
                     )
                 ),
                   ImageCarouselColumn(
-                    image_url="https://i.imgur.com/Np7eFyj.jpg",
+                    image_url="https://blackmomo.tw/wp-content/uploads/20170117223645_37.jpg",
                     action=URITemplateAction(
-                        label="可愛狗狗",
+                        label="吾舍生活",
                         uri="http://imgm.cnmo-img.com.cn/appimg/screenpic/big/674/673928.JPG"
                     )
                 ),
