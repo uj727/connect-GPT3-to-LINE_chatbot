@@ -69,9 +69,7 @@ def translate_text(text,de):
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    #msg = event.message.text
-    msg = translate_text(event.message.text, 'en')#輸入的句子轉英文
-
+    msg = event.message.text
     if '想看看附近有什麼好玩的~' in msg:
         message =image_carousel_message1() #message.py
         line_bot_api.reply_message(event.reply_token, message)
@@ -79,6 +77,7 @@ def handle_message(event):
     elif '你好，有些住宿問題想要詢問!' in msg:
        pass
     else:
+        msg = translate_text(event.message.text, 'en')#輸入的句子轉英文
         ans=ask(msg)#輸出英文
         ans = translate_text(ans, 'zh-tw')#輸出轉成中文``
         message = TextSendMessage(text=ans)
