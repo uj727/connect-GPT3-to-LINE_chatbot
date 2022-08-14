@@ -20,7 +20,7 @@ def image_carousel_message1():
                     image_url="https://youimg1.tripcdn.com/target/0106v120009g3u6op325B.jpg",
                     action=URITemplateAction(
                         label="吾舍。生活 Woosah-Life",
-                        uri="https://www.facebook.com/woosahlife"
+                        uri="hhttps://hiking.biji.co/index.php?q=trail&act=detail&id=598"
                     )
                 ),
                 ImageCarouselColumn(
