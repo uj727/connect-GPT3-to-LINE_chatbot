@@ -75,7 +75,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, message)
 
     elif '你好，有些住宿問題想要詢問!' in msg:
-        message = TextSendMessage(text="您好，我們是名人堂花園大飯店\
+        message = TextSendMessage(text="親愛的顧客您好\
                                             如果您在住宿期間內碰到問題\
                                             歡迎撥打以下電話:03-4339090\
                                             我們會有專人為您服務\
