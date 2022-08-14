@@ -77,7 +77,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, message)
 
     elif '22' in msg:
-        message = Carousel_Template() #message.py
+        message =image_carousel_message1() #message.py
         line_bot_api.reply_message(event.reply_token, message)
     
     else:
