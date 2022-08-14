@@ -20,7 +20,7 @@ def image_carousel_message1():
                     image_url="https://cdn.walkerland.com.tw/images/upload/poi/p80463/m15225/8aff422a7cd40b8b61f53182cab38ca6680cb13e.jpg",
                     action=URITemplateAction(
                         label="吾舍。生活 Woosah-Life",
-                        uri="https://www.facebook.com/woosahlife"
+                        #uri="https://www.facebook.com/woosahlife"
                     )
                 ),
                 ImageCarouselColumn(
