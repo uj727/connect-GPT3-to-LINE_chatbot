@@ -17,7 +17,7 @@ def image_carousel_message1():
                     )
                 ),
                 ImageCarouselColumn(
-                    image_url="https://blackmomo.tw/wp-content/uploads/20170117223645_37.jpg",
+                    image_url="https://youimg1.tripcdn.com/target/0106v120009g3u6op325B.jpg",
                     action=URITemplateAction(
                         label="吾舍。生活 Woosah-Life",
                         uri="https://www.facebook.com/woosahlife"
