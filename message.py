@@ -9,27 +9,27 @@ def image_carousel_message1():
         alt_text='附近景點',
         template=ImageCarouselTemplate(
             columns=[      
-                ImageCarouselColumn(
-                    image_url="https://pic.pimg.tw/yangbingyu/1527444375-3665627483.jpg",
-                    action=URITemplateAction(
-                        label="桑葚緣觀光果園",
-                        uri="https://haostore.fami.life/001971/"
-                    )
-                ),
-                ImageCarouselColumn(
-                    image_url="https://cdn.walkerland.com.tw/images/upload/poi/p80463/m15225/8aff422a7cd40b8b61f53182cab38ca6680cb13e.jpg",
-                    action=URITemplateAction(
-                        label="吾舍。生活 Woosah-Life",
-                        uri="https://www.facebook.com/woosahlife/"
-                    )
-                ),
-                ImageCarouselColumn(
-                    image_url="https://youimg1.tripcdn.com/target/0106v120009g3u6op325B.jpg",
-                    action=URITemplateAction(
-                        label="溪洲山步道",
-                        uri="https://hiking.biji.co/index.php?q=trail&act=detail&id=598"
-                    )
-                ),
+                # ImageCarouselColumn(
+                #     image_url="https://pic.pimg.tw/yangbingyu/1527444375-3665627483.jpg",
+                #     action=URITemplateAction(
+                #         label="桑葚緣觀光果園",
+                #         uri="https://haostore.fami.life/001971/"
+                #     )
+                # ),
+                # ImageCarouselColumn(
+                #     image_url="https://cdn.walkerland.com.tw/images/upload/poi/p80463/m15225/8aff422a7cd40b8b61f53182cab38ca6680cb13e.jpg",
+                #     action=URITemplateAction(
+                #         label="吾舍。生活 Woosah-Life",
+                #         uri="https://www.facebook.com/woosahlife/"
+                #     )
+                # ),
+                # ImageCarouselColumn(
+                #     image_url="https://youimg1.tripcdn.com/target/0106v120009g3u6op325B.jpg",
+                #     action=URITemplateAction(
+                #         label="溪洲山步道",
+                #         uri="https://hiking.biji.co/index.php?q=trail&act=detail&id=598"
+                #     )
+                # ),
                  ImageCarouselColumn(
                     image_url="https://ireneslife.com/wp-content/uploads/2019/12/1575194969-1e860b27963d9e9d48e73585da40d20f.jpg",
                     action=URITemplateAction(

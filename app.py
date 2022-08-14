@@ -75,7 +75,8 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, message)
 
     elif '你好，有些住宿問題想要詢問!' in msg:
-       pass
+        message = TextSendMessage(text=msg) #回一樣的訊息
+        line_bot_api.reply_message(event.reply_token, message)
     else:
         msg = translate_text(event.message.text, 'en')#輸入的句子轉英文
         ans=ask(msg)#輸出英文
