@@ -3,4 +3,4 @@ flask
 openai
 googletrans==3.1.0a0
 transformers 
-pytorch
+torch
