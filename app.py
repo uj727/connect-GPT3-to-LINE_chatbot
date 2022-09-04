@@ -23,6 +23,9 @@ import time
 import openai 
 import threading 
 import requests
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, pipeline
+model = AutoModelForSeq2SeqLM.from_pretrained("facebook/nllb-200-distilled-600M")
+tokenizer = AutoTokenizer.from_pretrained("facebook/nllb-200-distilled-600M")
 #======python的函數庫==========
 
 #======讓heroku不會睡著======
@@ -84,9 +87,13 @@ def handle_message(event):
                                             我們會有專人回覆~") 
         line_bot_api.reply_message(event.reply_token, message)
     else:
-        msg = translate_text(event.message.text, 'en')#輸入的句子轉英文
+       # msg = translate_text(event.message.text, 'en')#輸入的句子轉英文
+        translator= pipeline('translation', model=model, tokenizer=tokenizer, src_lang="zho_Hant", tgt_lang='eng_Latn', max_length = 400)
+        translator(event.message.text)
         ans=ask(msg)#輸出英文
-        ans = translate_text(ans, 'zh-tw')#輸出轉成中文``
+        translator= pipeline('translation', model=model, tokenizer=tokenizer, src_lang="eng_Latn", tgt_lang='zho_Hant', max_length = 400)
+        translator(ans)
+        #ans = translate_text(ans, 'zh-tw')#輸出轉成中文``
         message = TextSendMessage(text=ans)
         line_bot_api.reply_message(event.reply_token, message)
 
