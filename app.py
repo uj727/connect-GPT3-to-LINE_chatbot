@@ -76,7 +76,9 @@ def handle_message(event):
     if '想看看附近有什麼好玩的~' in msg:
         message =image_carousel_message1() #message.py
         line_bot_api.reply_message(event.reply_token, message)
-
+    elif '想看看附近~' in msg:
+        message = TextSendMessage(text="親愛的顧客您好")
+        line_bot_api.reply_message(event.reply_token, message)
     elif '你好，有些住宿問題想要詢問!' in msg:
         message = TextSendMessage(text="親愛的顧客您好\
                                             如果您在住宿期間內碰到問題\
