@@ -24,17 +24,17 @@ def image_carousel_message1():
                     )
                 ),
                 ImageCarouselColumn(
-                    image_url="https://i.imgur.com/Np7eFyj.jpg",
+                    image_url="https://www.94i-penghu.com/play-detail/upload/catalog_play_m/tw_catalog_play_list_18j12_8db466e9mc.jpg",
                     action=URITemplateAction(
-                        label="可愛狗狗",
-                        uri="http://imgm.cnmo-img.com.cn/appimg/screenpic/big/674/673928.JPG"
+                        label="奎壁山地質公園",
+                        uri="https://www.travelking.com.tw/tourguide/scenery105377.html"
                     )
                 ),
                 ImageCarouselColumn(
-                    image_url="https://i.imgur.com/QRIa5Dz.jpg",
+                    image_url="https://image.lanlan.tw/flickr/14383824929_cb1850bb16_o.jpg",
                     action=URITemplateAction(
-                        label="可愛貓咪",
-                        uri="https://m-miya.net/wp-content/uploads/2014/07/0-065-1.min_.jpg"
+                        label="仙人掌冰",
+                        uri="https://penghuzine.com/eatinpenghu/d090/"
                     )
                 )
             ]
