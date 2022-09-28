@@ -12,14 +12,14 @@ def image_carousel_message1():
                 ImageCarouselColumn(
                     image_url="https://pic.pimg.tw/anrine910070/1652187202-2764170010-g.jpg",
                     action=URITemplateAction(
-                        label="山水沙灘圖片",
+                        label="山水沙灘",
                         uri="https://www.penghu-nsa.gov.tw/TravelInformationSceneryDetailC001200.aspx?Cond=eb226be1-d129-473b-bf39-d9b2e6ccf0e2&SortType=1&SearchAdvanced=False&Language=1028"
                     )
                 ),
                 ImageCarouselColumn(
                     image_url="https://pic.easytravel.com.tw/Attachments/m/A78360.jpg",
                     action=URITemplateAction(
-                        label="大菓葉柱狀玄武岩圖片",
+                        label="大菓葉柱狀玄武岩",
                         uri="https://rainieis.tw/daguoye-columnar-basalt/"
                     )
                 ),
