@@ -17,17 +17,17 @@ def image_carousel_message1():
                     )
                 ),
                 ImageCarouselColumn(
-                    image_url=" https://pic.easytravel.com.tw/Attachments/m/A78360.jpg",
+                    image_url="https://pic.easytravel.com.tw/Attachments/m/A78360.jpg",
                     action=URITemplateAction(
-                        label="大菓葉柱狀玄武岩",
+                        label="大菓葉柱狀玄武岩圖片",
                         uri="https://rainieis.tw/daguoye-columnar-basalt/"
                     )
                 ),
                 ImageCarouselColumn(
-                    image_url="https://www.94i-penghu.com/play-detail/upload/catalog_play_m/tw_catalog_play_list_18j12_8db466e9mc.jpg",
+                    image_url="https://i.imgur.com/Np7eFyj.jpg",
                     action=URITemplateAction(
-                        label="奎壁山地質公園",
-                        uri="https://www.travelking.com.tw/tourguide/scenery105377.html"
+                        label="可愛狗狗",
+                        uri="http://imgm.cnmo-img.com.cn/appimg/screenpic/big/674/673928.JPG"
                     )
                 ),
                 ImageCarouselColumn(
