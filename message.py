@@ -10,36 +10,35 @@ def image_carousel_message1():
         template=ImageCarouselTemplate(
             columns=[      
                 ImageCarouselColumn(
-                    image_url="https://pic.pimg.tw/yangbingyu/1527444375-3665627483.jpg",
+                    image_url="https://pic.pimg.tw/anrine910070/1652187202-2764170010-g.jpg",
                     action=URITemplateAction(
-                        label="桑葚緣觀光果園",
-                        uri="https://haostore.fami.life/001971/"
+                        label="山水沙灘圖片",
+                        uri="https://www.penghu-nsa.gov.tw/TravelInformationSceneryDetailC001200.aspx?Cond=eb226be1-d129-473b-bf39-d9b2e6ccf0e2&SortType=1&SearchAdvanced=False&Language=1028"
                     )
                 ),
                   ImageCarouselColumn(
-                    image_url="https://blackmomo.tw/wp-content/uploads/20170117223645_37.jpg",
+                    image_url=" https://pic.easytravel.com.tw/Attachments/m/A78360.jpg",
                     action=URITemplateAction(
-                        label="吾舍生活",
-                        uri="http://imgm.cnmo-img.com.cn/appimg/screenpic/big/674/673928.JPG"
+                        label="大菓葉柱狀玄武岩",
+                        uri="https://rainieis.tw/daguoye-columnar-basalt/"
                     )
                 ),
                 ImageCarouselColumn(
-                    image_url="https://youimg1.tripcdn.com/target/0106v120009g3u6op325B.jpg",
+                    image_url="https://www.94i-penghu.com/play-detail/upload/catalog_play_m/tw_catalog_play_list_18j12_8db466e9mc.jpg",
                     action=URITemplateAction(
-                        label="溪洲山步道",
-                        uri="https://hiking.biji.co/index.php?q=trail&act=detail&id=598"
+                        label="奎壁山地質公園",
+                        uri="https://www.travelking.com.tw/tourguide/scenery105377.html"
                     )
                 ),
                  ImageCarouselColumn(
-                    image_url="https://ireneslife.com/wp-content/uploads/2019/12/1575194969-1e860b27963d9e9d48e73585da40d20f.jpg",
+                    image_url="https://image.lanlan.tw/flickr/14383824929_cb1850bb16_o.jpg",
                     action=URITemplateAction(
-                        label="球場",
-                        uri="https://lovefree365.pixnet.net/blog/post/405248655-%E3%80%90%E6%A1%83%E5%9C%92%E6%A3%92%E7%90%83%E5%90%8D%E4%BA%BA%E5%A0%82%E3%80%91%E5%B7%A8%E5%9E%8B%E7%90%83%E5%BD%A2%E5%A4%A7%E6%A8%93%E5%85%8D%E8%B2%BB%E5%8F%83%E8%A7%80%E5%8F%B2"
+                        label="仙人掌冰",
+                        uri="https://penghuzine.com/eatinpenghu/d090/"
                     )
                 )
             ]
         )
     )
     return message
-
 #關於LINEBOT聊天內容範例

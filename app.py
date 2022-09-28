@@ -76,17 +76,20 @@ def handle_message(event):
     if '想看看附近有什麼好玩的~' in msg:
         message =image_carousel_message1() #message.py
         line_bot_api.reply_message(event.reply_token, message)
-    elif '還有空房嗎' in msg:
+    elif '還有空房嗎' or '55' in msg:
+        message = TextSendMessage(text="詳請請洽官網")
+        line_bot_api.reply_message(event.reply_token, message)
+    elif '房型介紹' in msg :
         message = TextSendMessage(text="詳請請洽官網")
         line_bot_api.reply_message(event.reply_token, message)
     elif '你好，有些住宿問題想要詢問!' in msg:
         message = TextSendMessage(text="親愛的顧客您好\
                                             如果您在住宿期間內碰到問題\
-                                            歡迎撥打以下電話:03-4339090\
+                                            歡迎撥打以下電話:06-926-2253\
                                             我們會有專人為您服務\
                                             如果您想給予寶貴的意見\
-                                            可以在聊天室留下您的建議,\
-                                            我們會有專人回覆~") 
+                                            歡迎在聊天室與我們交流。\
+                                            ") 
         line_bot_api.reply_message(event.reply_token, message)
     else:
         msg = translate_text(event.message.text, 'en')#輸入的句子轉英文
