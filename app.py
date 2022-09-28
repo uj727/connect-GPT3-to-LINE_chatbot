@@ -79,13 +79,13 @@ def handle_message(event):
     # elif '取消訂房' or '延期' in msg:
     #     message = TextSendMessage(text="請於確認訂房日期後三日內（含訂房當日），匯款轉帳，訂金為房價之５０％，逾期將自動取消訂房，不另通知。匯款後請務必告知姓名、電話、帳號末五碼、住房日期，餘款於入住時現金支付（暫無提供刷卡服務，敬請見諒）")
     #     line_bot_api.reply_message(event.reply_token, message)
-    if '環境設施' or '房型' or '官方網站' or '關於我們' in msg :
+    elif '環境設施' in msg :
         message = TextSendMessage(text="詳請請洽官網 http://www.52ph.tw/default.asp 的相關介紹")
         line_bot_api.reply_message(event.reply_token, message)
-    if '有專車接送嗎' in msg :
+    elif '有專車接送嗎' in msg :
         message = TextSendMessage(text="只要事先留下聯絡資訊，不管坐船或搭機我們都有提供專車接送喔!!")
         line_bot_api.reply_message(event.reply_token, message)
-    if '你好，有些住宿問題想要詢問!' in msg:
+    elif '你好，有些住宿問題想要詢問!' in msg:
         message = TextSendMessage(text="親愛的顧客您好\
                                             如果您在住宿期間內碰到問題\
                                             歡迎撥打以下電話:06-926-2253\
