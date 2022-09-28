@@ -76,11 +76,11 @@ def handle_message(event):
     if '想看看附近有什麼好玩的~' in msg:
         message =image_carousel_message1() #message.py
         line_bot_api.reply_message(event.reply_token, message)
-    elif '還有空房嗎' or '55' in msg:
+    elif '還有空房嗎' or '房型' in msg:
         message = TextSendMessage(text="詳請請洽官網")
         line_bot_api.reply_message(event.reply_token, message)
     elif '房型介紹' in msg :
-        message = TextSendMessage(text="詳請請洽官網")
+        message = TextSendMessage(text="詳請請洽官網http://www.52ph.tw/default.asp 的宿房介紹")
         line_bot_api.reply_message(event.reply_token, message)
     elif '你好，有些住宿問題想要詢問!' in msg:
         message = TextSendMessage(text="親愛的顧客您好\
