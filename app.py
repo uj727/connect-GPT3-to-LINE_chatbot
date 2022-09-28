@@ -79,7 +79,7 @@ def handle_message(event):
     elif ( '取消訂房' or '延期') in msg:
          message = TextSendMessage(text="請於確認訂房日期後三日內（含訂房當日），匯款轉帳，訂金為房價之５０％，逾期將自動取消訂房，不另通知。匯款後請務必告知姓名、電話、帳號末五碼、住房日期，餘款於入住時現金支付（暫無提供刷卡服務，敬請見諒）")
          line_bot_api.reply_message(event.reply_token, message)
-    elif '環境設施' in msg or '關於我們' in msg or '房間介紹' in msg :
+    elif ('環境設施' or '關於我們' or '房間介紹' or '價格') in msg :
         message = TextSendMessage(text="詳請請洽官網 http://www.52ph.tw/default.asp 的相關介紹")
         line_bot_api.reply_message(event.reply_token, message)
     elif '有專車接送嗎' in msg :
