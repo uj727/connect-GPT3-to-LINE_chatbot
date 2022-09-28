@@ -6,8 +6,8 @@ def ask(q):
     openai.api_key = "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"
                    
     response = openai.Completion.create(
-    model="curie:ft-yzu-2022-07-31-15-46-24",
-    prompt=q+"$",
+    model="text-curie-001",
+    prompt=q,
     temperature=0.7,
     max_tokens=256,
     top_p=1,
