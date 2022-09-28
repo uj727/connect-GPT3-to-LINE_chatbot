@@ -6,35 +6,35 @@ from linebot.models import *
 
 def image_carousel_message1():
     message = TemplateSendMessage(
-        alt_text='附近景點',
+        alt_text='圖片',
         template=ImageCarouselTemplate(
-            columns=[      
+            columns=[
                 ImageCarouselColumn(
-                    image_url="https://pic.pimg.tw/anrine910070/1652187202-2764170010-g.jpg",
+                    image_url="https://i.imgur.com/uKYgfVs.jpg",
                     action=URITemplateAction(
-                        label="山水沙灘圖片",
-                        uri="https://www.penghu-nsa.gov.tw/TravelInformationSceneryDetailC001200.aspx?Cond=eb226be1-d129-473b-bf39-d9b2e6ccf0e2&SortType=1&SearchAdvanced=False&Language=1028"
-                    )
-                ),
-                  ImageCarouselColumn(
-                    image_url=" https://pic.easytravel.com.tw/Attachments/m/A78360.jpg",
-                    action=URITemplateAction(
-                        label="大菓葉柱狀玄武岩",
-                        uri="https://rainieis.tw/daguoye-columnar-basalt/"
+                        label="新鮮水果",
+                        uri="http://img.juimg.com/tuku/yulantu/110709/222-110F91G31375.jpg"
                     )
                 ),
                 ImageCarouselColumn(
-                    image_url="https://www.94i-penghu.com/play-detail/upload/catalog_play_m/tw_catalog_play_list_18j12_8db466e9mc.jpg",
+                    image_url="https://i.imgur.com/QOcAvjt.jpg",
                     action=URITemplateAction(
-                        label="奎壁山地質公園",
-                        uri="https://www.travelking.com.tw/tourguide/scenery105377.html"
+                        label="新鮮蔬菜",
+                        uri="https://cdn.101mediaimage.com/img/file/1410464751urhp5.jpg"
                     )
                 ),
-                 ImageCarouselColumn(
-                    image_url="https://image.lanlan.tw/flickr/14383824929_cb1850bb16_o.jpg",
+                ImageCarouselColumn(
+                    image_url="https://i.imgur.com/Np7eFyj.jpg",
                     action=URITemplateAction(
-                        label="仙人掌冰",
-                        uri="https://penghuzine.com/eatinpenghu/d090/"
+                        label="可愛狗狗",
+                        uri="http://imgm.cnmo-img.com.cn/appimg/screenpic/big/674/673928.JPG"
+                    )
+                ),
+                ImageCarouselColumn(
+                    image_url="https://i.imgur.com/QRIa5Dz.jpg",
+                    action=URITemplateAction(
+                        label="可愛貓咪",
+                        uri="https://m-miya.net/wp-content/uploads/2014/07/0-065-1.min_.jpg"
                     )
                 )
             ]
