@@ -10,10 +10,10 @@ def image_carousel_message1():
         template=ImageCarouselTemplate(
             columns=[
                 ImageCarouselColumn(
-                    image_url="https://i.imgur.com/uKYgfVs.jpg",
+                    image_url="https://pic.pimg.tw/anrine910070/1652187202-2764170010-g.jpg",
                     action=URITemplateAction(
-                        label="新鮮水果",
-                        uri="http://img.juimg.com/tuku/yulantu/110709/222-110F91G31375.jpg"
+                        label="山水沙灘圖片",
+                        uri="https://www.penghu-nsa.gov.tw/TravelInformationSceneryDetailC001200.aspx?Cond=eb226be1-d129-473b-bf39-d9b2e6ccf0e2&SortType=1&SearchAdvanced=False&Language=1028"
                     )
                 ),
                 ImageCarouselColumn(
