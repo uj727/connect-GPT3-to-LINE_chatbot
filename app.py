@@ -27,7 +27,7 @@ import requests
 #======python的函數庫==========
 
 #======讓heroku不會睡著======
-'''def wake_up_heroku():
+def wake_up_heroku():
     while 1==1:
         url = 'https://carebot0.herokuapp.com/' + 'heroku_wake_up'
         res = requests.get(url)
@@ -37,15 +37,14 @@ import requests
             print('喚醒失敗')
         time.sleep(28*60)
 
-threading.Thread(target=wake_up_heroku).start()'''
+threading.Thread(target=wake_up_heroku).start()
 #======讓heroku不會睡著======
 
 app = Flask(__name__)
 static_tmp_path = os.path.join(os.path.dirname(__file__), 'static', 'tmp')
-# Channel Access Token
-line_bot_api = LineBotApi('QnQ0GccEGvNeJSJKjnHMm5+VcorJPuAxgrCtxqHAhgW+IQKOGJtz8V8p2M2Vql+NvgUQeScpZI3JJBAQ+bct4N86V7OeKMTTmmCYJG8git3YAm50kEYoE3Syi1gdb8ijlVlgfa5sWiceYbjrbFVl/AdB04t89/1O/w1cDnyilFU=')
-# Channel Secret
-handler = WebhookHandler('acfb595de7ce00a944e38464f437c693')
+
+line_bot_api = LineBotApi('')# Channel Access Token
+handler = WebhookHandler('')# Channel Secret
 
 # 監聽所有來自 /callback 的 Post Request
 @app.route("/callback", methods=['POST'])
@@ -62,6 +61,7 @@ def callback():
         abort(400)
     return 'OK'
 
+#翻譯套件
 def translate_text(text,de):
     translator = Translator()
     result = translator.translate(text, dest=de).text
@@ -78,19 +78,6 @@ def handle_message(event):
     message = TextSendMessage(text=ans)
     line_bot_api.reply_message(event.reply_token, message)
 
-@handler.add(PostbackEvent)
-def handle_message(event):
-    print(event.postback.data)
-
-@handler.add(MemberJoinedEvent)
-def welcome(event):
-    uid = event.joined.members[0].user_id
-    gid = event.source.group_id
-    profile = line_bot_api.get_group_member_profile(gid, uid)
-    name = profile.display_name
-    message = TextSendMessage(text=f'{name}歡迎加入')
-    line_bot_api.reply_message(event.reply_token, message)
-        
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
